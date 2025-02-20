@@ -1,5 +1,5 @@
 
-    BFS(current) {
+   function BFS(current) {
         adj = Array.from({ length: size }, () => []); // Adjacency list
         vis = Array(size).fill(false); // Visited array
     
