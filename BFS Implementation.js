@@ -1,10 +1,8 @@
-class Graph {
- 
+
+    BFS(current) {
         adj = Array.from({ length: size }, () => []); // Adjacency list
         vis = Array(size).fill(false); // Visited array
     
-
-    BFS(current) {
         let q = []; // Queue for BFS
         q.push(current);
         vis[current] = true;
@@ -19,5 +17,5 @@ class Graph {
             }
         }
     }
-}
+
 
