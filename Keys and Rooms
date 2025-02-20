@@ -1,0 +1,28 @@
+/**
+ * @param {number[][]} rooms
+ * @return {boolean}
+ */
+    
+  var canVisitAllRooms= function(rooms) {
+    visited = new Array(1001).fill(false);
+
+    var dfs=function(room) {
+        visited[room] = true;
+        for (let key of rooms[room]) {
+            if (!visited[key]) {
+                dfs(key);
+            }
+        }
+    };
+
+
+        dfs(0);
+        
+        for (let i = 1; i < rooms.length; i++) {
+            if (!visited[i]) {
+                return false;
+            }
+        }
+        return true;
+    };
+
