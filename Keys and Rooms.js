@@ -4,7 +4,7 @@
  */
     
   var canVisitAllRooms= function(rooms) {
-    visited = new Array(1001).fill(false);
+    visited = new Array(rooms.length).fill(false);
 
     var dfs=function(room) {
         visited[room] = true;
