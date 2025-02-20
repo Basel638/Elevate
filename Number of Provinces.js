@@ -1,6 +1,6 @@
 var findCircleNum = function(isConnected) {
-        vis = new Array(201).fill(false); // Visited array
-        adj = Array.from({ length: 201 }, () => []); // Adjacency list
+        vis = new Array(isConnected.length).fill(false); // Visited array
+        adj = Array.from({ length: isConnected.length }, () => []); // Adjacency list
 
 
        var dfs = function(cur) {
@@ -23,8 +23,8 @@ var findCircleNum = function(isConnected) {
         }
 
         let ans = 0;
-        for (let i = 0; i < 201; i++) {
-            if (adj[i].length > 0 && !vis[i]) {
+        for (let i = 0; i <isConnected.length; i++) {
+            if (!vis[i]) {
                 ans++;
                 dfs(i);
             }
