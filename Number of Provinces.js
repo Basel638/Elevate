@@ -14,7 +14,7 @@ var findCircleNum = function(isConnected) {
 
         // Build adjacency list
         for (let i = 0; i < isConnected.length; i++) {
-            for (let j = 0; j < isConnected.length; j++) {
+            for (let j = 0; j < isConnected[i].length; j++) {
                 if (isConnected[i][j]) {
                     adj[i].push(j);
                     adj[j].push(i);
