@@ -1,7 +1,7 @@
 
    function BFS(current) {
-        adj = Array.from({ length: size }, () => []); // Adjacency list
-        vis = Array(size).fill(false); // Visited array
+        adj = Array.from({ length: 100 }, () => []); // Adjacency list
+        vis = Array(100).fill(false); // Visited array
     
         let q = []; // Queue for BFS
         q.push(current);
