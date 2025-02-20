@@ -1,0 +1,12 @@
+const adj = Array.from({ length: 100 }, () => []); // Adjacency list
+const vis = new Array(100).fill(false); // Visited array
+
+function DFS(current) {
+    vis[current] = true;
+
+    for (let child of adj[current]) {
+        if (!vis[child]) {
+            DFS(child);
+        }
+    }
+}
