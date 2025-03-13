@@ -1,6 +1,6 @@
 var minCostClimbingStairs = function(cost) {
     
-    list = new Array(cost.length).fill(-1);
+    list = new Array(1001).fill(-1);
     var solve= function(i)
     {
         if(i>=cost.length)
