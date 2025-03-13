@@ -16,7 +16,7 @@ var coinChange = function(coins, amount) {
             }
 
             list[amt] = minn;
-            return minn;
+            return list[amt];
         }
 
         let result = minCoins(amount);
