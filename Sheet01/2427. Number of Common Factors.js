@@ -1,0 +1,10 @@
+var commonFactors = function(a, b) {
+    let count = 0;
+    const minNumber = Math.min(a, b);
+    for (let i = 1; i <= minNumber; i++) {
+        if (a % i === 0 && b % i === 0) {
+            count++;
+        }
+    }
+    return count; 
+};
