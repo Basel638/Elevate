@@ -28,7 +28,7 @@ var gcdOfStrings = function(str1, str2) {
         if (str1.length % minString.length === 0 && str2.length % minString.length === 0 && isValid(str1, str2, minString)) 
             return minString;
         
-        minString = minString.slice(0, -1); 
+        minString = minString.slice(0, -1);  // remove last character
     }
 
     return "";
