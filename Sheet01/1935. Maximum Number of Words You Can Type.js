@@ -5,7 +5,7 @@ var canBeTypedWords = function(text, brokenLetters) {
 
         for (const word of words) {
             for (const char of word) {
-                if (brokenLettersSet.has(char)) {
+                if (brokenLettersSet.has(char)) {    // O(1)
                     length--;
                     break;
                 }
