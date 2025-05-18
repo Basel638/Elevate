@@ -3,7 +3,7 @@
  * @return {number}
  */
 var myAtoi = function(s) {
-    s = s.trim();
+    s = s.trim(); // Remove WhiteSpaces
 
     if (s.length === 0) return 0;
 
