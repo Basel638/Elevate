@@ -18,3 +18,25 @@ var mySqrt = function(x) {
     }
     return res;
 };
+
+
+
+// recursive 
+
+function myrec(l, r, n, res)
+ {
+    if (l > r || res == n) return res;
+    mid = Math.floor((l + r) / 2);
+    
+    if(mid**2 <= n){
+         res = mid
+         return myrec(mid+1,r,n,res) ;
+    }
+    
+    else if (mid ** 2 > n)
+        return myrec(l,mid-1,n,res);
+       
+ }
+var mySqrt = function(x) {
+    return myrec(0,x,x,0)
+};
