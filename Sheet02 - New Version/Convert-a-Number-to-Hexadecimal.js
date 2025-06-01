@@ -19,6 +19,6 @@
 var toHex = function(num) {
     
      if (num === 0) return \0\;
-        let n = num >>> 0; 
+        let n = num >>> 0;  // zero-fill right shift operator
         return rec(n , \\);
 };
