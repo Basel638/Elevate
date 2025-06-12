@@ -3,6 +3,8 @@
  * @param {string} t
  * @return {boolean}
  */
+
+=== with => Time O(n), Space O(n) ===
 var isAnagram = function(s, t) {
     
     if(s.length != t.length)
@@ -24,3 +26,12 @@ var isAnagram = function(s, t) {
     }
     return true;
 };
+
+
+
+=== with => Time O(nlog(n)), Space Constant ===
+var isAnagram = function(s, t) {
+ 
+    return s.split('').sort().join('') == t.split('').sort().join('');
+};
+
