@@ -16,7 +16,7 @@ var solve = function(n){
 var countBits = function(n) {
    
     let ans = [];
-    for(let i = 0; i < n + 1; i++ )
+    for(let i = 0; i <= n; i++ )
     {
         let value = solve(i);
         ans.push(value);
