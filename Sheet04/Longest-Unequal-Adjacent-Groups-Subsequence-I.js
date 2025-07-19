@@ -6,7 +6,7 @@
  
 var getLongestSubsequence = function(words, groups) {
     
-    let res = 0;
+   
     let currentWord = [], resWord = [];
     for(let i = 0; i < words.length; i++)
     {   let x = groups[i];
@@ -19,9 +19,8 @@ var getLongestSubsequence = function(words, groups) {
                 x = groups[j];
             }
         }
-        if(res <= currentWord.length)
+        if(resWord.length <= currentWord.length)
         {
-            res = currentWord.length;
             resWord = currentWord;
         }
             currentWord = [];
