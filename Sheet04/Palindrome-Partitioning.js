@@ -20,7 +20,7 @@ var partition = function(s) {
         var backtracking = function(i) {
             
             if (i >= s.length) {
-                res.push([...part]); 
+                res.push([...part]);  // spread syntax
                 return;
             }
             
