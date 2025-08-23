@@ -3,18 +3,21 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    
-    let n = nums.length;
 
-    let TotalSum = (n * (n + 1)) / 2;
+   let arr = new Array(1e4 + 1).fill(0); 
 
-    let sum = 0;
+   
    
     for(let num of nums)
     {
-        sum += num;
+        arr[num]++;
     }
 
-    return TotalSum - sum;
+
+    for(let i = 0; i < arr.length; i++)
+    {
+        if(arr[i] == 0)
+            return i;
+    }
 
 };
