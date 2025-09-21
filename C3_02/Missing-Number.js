@@ -3,21 +3,23 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
+    
+    
+    let freq = new Array(nums.length + 1).fill(0);
 
-   let arr = new Array(1e4 + 1).fill(0); 
 
-   
-   
     for(let num of nums)
     {
-        arr[num]++;
+        freq[num] = 1;
     }
 
 
-    for(let i = 0; i < arr.length; i++)
+    for(let i = 0; i < freq.length; i++)
     {
-        if(arr[i] == 0)
+        if(freq[i] == 0)
             return i;
     }
+
+
 
 };
