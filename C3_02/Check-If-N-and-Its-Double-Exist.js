@@ -5,12 +5,12 @@
 var checkIfExist = function(arr) {
     
     let freq = new Array(1e3 + 1).fill(-1);
+    
     let count0 = 0;
-
-    for(let i = 0; i < arr.length; i++)
+    for(let num of arr)
     {
-        freq[arr[i]] = 1;
-        if(arr[i] == 0)
+        freq[num] = 1;
+        if(num == 0)
             count0++;
     }
 
@@ -19,15 +19,15 @@ var checkIfExist = function(arr) {
     
     else
     {
-        
-    for(let i = 0; i< arr.length; i++)
+
+    
+
+    for(let i = 0; i < arr.length; i++)
     {
-        if(arr[i] != 0 && freq[2 * arr[i]] == 1)
+        if(freq[arr[i] * 2] == 1 &&  arr[i] != 0)
             return true;
     }
-
+    
     return false;
-
     }
-
 };
