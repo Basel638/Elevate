@@ -21,6 +21,15 @@ function readline() {
   return inputString[currentLine++];
 }
 
+function main(){
+              let n = Number(readline());
+              let m = Number(readline());
+              
+              console.log((n % 10) + (m % 10));
+              
+}
+======================================================================================
+  
 function main() {
   var n = readline();
   var x = readline();
