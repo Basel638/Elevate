@@ -13,14 +13,13 @@ process.stdin.on("data", (inputStdin) => {
   inputString += inputStdin;
 });
 process.stdin.on("end", () => {
-  inputString = inputString.trim().split(/\s+/); // split by spaces or newlines
+  inputString = inputString.trim().split(/\s+/); 
   main();
 });
 
 function readline() {
   return inputString[currentLine++];
 }
-
 function main() {
   var n = Number(readline());
   
