@@ -4,17 +4,22 @@
 4 */
 5var missingNumber = function(nums) {
 6    
-7    let n = nums.length;
-8
-9    let TotalSum = (n * (n + 1)) / 2;
+7    
+8    let freq = new Array(nums.length + 1).fill(0);
+9
 10
-11    let sum = 0;
-12   
-13    for(let num of nums)
-14    {
-15        sum += num;
-16    }
-17
-18    return TotalSum - sum;
-19
-20};
+11    for(let num of nums)
+12    {
+13        freq[num] = 1;
+14    }
+15
+16
+17    for(let i = 0; i < freq.length; i++)
+18    {
+19        if(freq[i] == 0)
+20            return i;
+21    }
+22
+23
+24
+25};
