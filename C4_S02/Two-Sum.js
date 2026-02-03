@@ -16,3 +16,31 @@
 16        }
 17    }
 18};
+
+
+
+
+
+
+
+
+// Time limit Exceeded============================================================
+var twoSum = function(nums, target) {
+    
+    let freq = new Array(1e9 + 1).fill(-1);
+
+   for(let i=0 ; i< nums.length; i++)
+    {
+          freq[nums[i]] = i;
+    
+    }
+
+    for(let i=0 ; i< nums.length; i++)
+    {
+            if(freq[Math.abs(target - nums[i])] != -1)
+            {
+                return [i,freq[Math.abs(target - nums[i])]];
+            }
+    
+    }
+};
