@@ -2,6 +2,26 @@
 2 * @param {string} s
 3 * @return {number}
 4 */
+var lengthOfLastWord = function(s) {
+
+    let i;
+    for( i = s.length - 1; s[i] == ' ' ; i--)
+    {
+    }
+
+    let count = 0;
+
+    for(let x = i; x >= 0; x--)
+    {
+        if(s[x] == ' ')
+            break;
+        count++;
+    }
+
+    return count;
+};
+
+====================================================================
 5var lengthOfLastWord = function(s) {
 6
 7    let i;
