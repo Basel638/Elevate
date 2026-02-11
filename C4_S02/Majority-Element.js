@@ -2,6 +2,29 @@
 2 * @param {number[]} nums
 3 * @return {number}
 4 */
+
+
+// with frequency array => Time Limit Exceeded
+var majorityElement = function(nums) {
+   let freq = new Array(1e9 + 1).fill(0);
+
+   for(let num of nums)
+   {
+    freq[num]++;
+   }
+
+   for(let i = 0; i<freq.length; i++)
+   {
+        if(freq[i] >= Math.trunc(nums.length / 2))
+            return i;
+   }
+
+};
+
+
+
+
+
 5var majorityElement = function(nums) {
 6    nums.sort((a, b) => a - b); 
 7    let count = 1;
