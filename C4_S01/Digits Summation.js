@@ -22,7 +22,7 @@ function readline() {
 }
 
 function main(){
-              let n = Number(readline());
+              let n = Number(readline());        // Number () Limit to 10^15 only
               let m = Number(readline());
               
               console.log((n % 10) + (m % 10));
