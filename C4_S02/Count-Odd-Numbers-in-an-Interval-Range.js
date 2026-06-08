@@ -13,3 +13,19 @@
 13// 8 / 2 => 4
 14// low = 3 ??
 15
+
+
+//==============================
+/**
+ * @param {number} low
+ * @param {number} high
+ * @return {number}
+ */
+var countOdds = function(low, high) {
+    let count = 0;
+
+    for(let i = low; i<=high; i++)
+        if(i % 2) count++;
+
+    return count;
+};
