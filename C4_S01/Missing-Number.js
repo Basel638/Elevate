@@ -1,3 +1,31 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function(nums) {
+    
+    let totalSum = 0;
+    let currentSum = 0;
+
+
+    for(let i = 1; i <= nums.length; i++)
+    {
+        totalSum += i;
+    }
+
+    for(let num of nums)
+    {
+        currentSum += num;
+    }
+
+    return totalSum - currentSum;
+
+
+};
+
+===========================================
+  
+
 1/**
 2 * @param {number[]} nums
 3 * @return {number}
